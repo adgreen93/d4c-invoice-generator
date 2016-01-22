@@ -1,0 +1,17 @@
+{
+  "name": "invoicegen",
+  "version": "1.0.0",
+  "description": "invoice generator",
+  "main": "invoice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alex",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "handlebars": "^4.0.5",
+    "tinymce": "^4.3.3"
+  }
+}

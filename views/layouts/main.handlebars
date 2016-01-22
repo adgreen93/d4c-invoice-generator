@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+
+<script type="text/javascript">
+  tinymce.init({
+    selector: '#mytextarea',
+    plugins: "noneditable"
+  });
+  </script>
+</head>
+
+<body>
+<h1>Alexander Labs Invoice Generator</h1>
+  <form method="post">
+    <textarea id="mytextarea">
+
+    <div class="myclass mceNonEditable">
+    	<h1> Invoice </h1>
+    </div>
+
+    <div class="myclass mceEditable">
+    	Edit away.
+    </div>
+
+
+    </textarea>
+  </form>
+
+
+{{{body}}}
+
+</body>
+</html>
