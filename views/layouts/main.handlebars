@@ -2,8 +2,15 @@
 <html>
 <head>
 
-<script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+<style>
 
+div {
+    background: #fff;
+  }
+
+</style>
+
+<script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -14,22 +21,30 @@
   tinymce.init({
     selector: '#mytextarea',
     plugins: "noneditable, save",
-    menubar: false,
-    toolbar: "save",
+    menubar: true,
     height: 600,
-    width: 600,
-    save_onsavecallback: function () { console.log('Saved'); }
-  });
+    width: 1000,
+   // save_onsavecallback: function(){ 
+  // console.log("it worked!"); 
+});
   </script>
+
 </head>
 
 <body>
   <div class="container-fluid">
-<div class="page-header">
+<div class="page-header" style="text-align:center">
   <h1>Alexander Labs Invoice Generator</h1>
-  <p> Howdy! </p>
 </div>
+<p> This invoice generator was made in part of a series of free tools to help small businesses. It's effective and to the point - save time making invoices by keeping this tool online, and being able to mail completed invoices right to your client. </p>
+<div class="main">
 
+      <div class="well">
+        <p>Filename<p><input id="inputFileNameToSaveAs"></input></p>
+        <button class="btn btn-primary" onclick="saveTextAsFile()">Save Invoice</button>
+      </div>
+
+<div class="well">
     <textarea id="mytextarea">
 
     <div class="mceNonEditable">
@@ -37,15 +52,14 @@
     	<h1 style="text-align:center"> Hello. </h1>
       <h2 style="text-align:center"> This is your invoice. </h2>
       <h2> From </h2>
+
         <div class="mceEditable">
             <p> Name <br> Address <br> Email <br>
             </p>
         </div>
 
-      <h2> To </h2>
-       <p> Name <br>
-          Address <br>
-          Email <br>
+        <h2> To </h2>
+        <p> Name <br> Address <br> Email <br>
         </p>
 
         <h2> Invoice Date </h2>
@@ -60,13 +74,12 @@
           <p> Shipping </p>
           <p> Tax </p>
           <p> Total </p>
-    </div>
+        </div>
 
-
-    </textarea>
-  </form>
+      </textarea>
+ </div>
 </div>
-
+</div>
 
 {{{body}}}
 
