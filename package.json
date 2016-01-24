@@ -12,6 +12,7 @@
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
     "handlebars": "^4.0.5",
+    "jshint": "^2.9.1",
     "tinymce": "^4.3.3"
   }
 }

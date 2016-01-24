@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
- <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+
+<script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
   tinymce.init({
     selector: '#mytextarea',
-    plugins: "noneditable"
+    plugins: "noneditable, save",
+    menubar: false,
+    toolbar: "save",
+    height: 600,
+    width: 600,
+    save_onsavecallback: function () { console.log('Saved'); }
   });
   </script>
 </head>
 
 <body>
-<h1>Alexander Labs Invoice Generator</h1>
-  <form method="post">
+  <div class="container-fluid">
+<div class="page-header">
+  <h1>Alexander Labs Invoice Generator</h1>
+  <p> Howdy! </p>
+</div>
+
     <textarea id="mytextarea">
 
-    <div class="myclass mceNonEditable">
-    	<h1> Invoice </h1>
-    </div>
+    <div class="mceNonEditable">
 
-    <div class="myclass mceEditable">
-    	Edit away.
+    	<h1 style="text-align:center"> Hello. </h1>
+      <h2 style="text-align:center"> This is your invoice. </h2>
+      <h2> From </h2>
+        <div class="mceEditable">
+            <p> Name <br> Address <br> Email <br>
+            </p>
+        </div>
+
+      <h2> To </h2>
+       <p> Name <br>
+          Address <br>
+          Email <br>
+        </p>
+
+        <h2> Invoice Date </h2>
+        <p> # </p>
+        <h2> Due Date </h2>
+        <p> # </p>
+        <h2> Invoice # </h2>
+
+        <div class="mceEditable">
+          <h2> Items </h2>
+          <p> Subtotal </p>
+          <p> Shipping </p>
+          <p> Tax </p>
+          <p> Total </p>
     </div>
 
 
     </textarea>
   </form>
+</div>
 
 
 {{{body}}}

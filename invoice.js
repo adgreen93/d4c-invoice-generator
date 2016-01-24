@@ -6,6 +6,7 @@ var handle = require('handlebars');
 // this enables the server starter to work 
 var http = require('http').Server(app);
 
+//this sets up the layout with handlebars
 var handlebars = require('express-handlebars').create({
 
 		defaultLayout: 'main'
@@ -15,7 +16,6 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 //this is the link to the main page
-
 app.get('/', function(req, res){
 res.render('home');
 });
