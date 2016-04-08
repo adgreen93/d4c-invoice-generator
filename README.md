@@ -10,5 +10,5 @@ it's far from as nice, the learning experience was definetely worth it.
 It's made with Express & TinyMCE.
 
 ![trst](/d4c1.png)
-![trst](/d4c2.png)
-![trst](/d4c3.png)
+
+
